@@ -7,7 +7,7 @@ app.config['DEBUG'] = True
 def index():
     return render_template('signup.html', title="User Signup")
 
-@app.route("/", methods=['POST'])
+@app.route("/welcome", methods=['POST'])
 def welcome():
 
     #collect user data
@@ -31,8 +31,8 @@ def welcome():
     if password == "": #no password entered
         no_pass = "Please enter a password."
         error_check += 1
-    elif len(password) < 4: #password less than 4 chars
-        no_pass = "Password must be at least 4 characters."
+    elif len(password) < 4 or len(password) > 20: #password less than 4 chars, greater than 20
+        no_pass = "Password must be between 4 and 20 characters."
         error_check += 1
     elif " " in list(password): #Space in password
         no_pass = "Password may not contain spaces."

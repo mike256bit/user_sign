@@ -77,17 +77,30 @@ input {
     letter-spacing: 3px;
     color: #ffe75f;
     transition-duration: 0.6s;
+    transition-timing-function: ease-in;
     z-index: 1;
 }
 
 .submit:hover {
     background-color: #fff;
     color: #475252;
-    box-shadow: 0px 0px 10px #9cdfdf;
+    /* box-shadow: 0px 0px 10px #9cdfdf; */
+    animation: pulse .8s infinite alternate ease-in;
 }
 
+@keyframes pulse {
+    from{
+        box-shadow: 0px 0px 0px #9cdfdf;
+    }
+
+    to{
+        box-shadow: 0px 0px 10px #9cdfdf;
+    }
+}
+
+
 .reset {
-    margin: 2px auto;
+    margin: 5px auto -10px;
     height: 18px;
     width: 50%;
     border: 0;
@@ -104,6 +117,12 @@ h1 {
 
 h2 {
     font-size: 12px;
+}
+
+h3 {
+    font-size: 9px;
+    margin-top: 0px;
+    letter-spacing: .5px;
 }
 
 .foot {
