@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <!-- <html lang="en"> -->
-<head>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible"> -->
-    <title>{{title}}</title>
-    <link rel="stylesheet"  href="{{ url_for('static', filename='style.css')}}">
-    
-</head>
-<body>
-    <div class="signup">
-        {% block content %}
-        {% endblock %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        
+    </head>
+    <body>
+        <div class="signup">
+            {% block content %}
+            {% endblock %}
+        </div>
+    <div class="foot grayback">
+        Michael Toth &copy; 2018 | LC101 Unit 2 | User Signup
     </div>
-</body>
+    </body>
 </html>

@@ -5,23 +5,31 @@
     <form action="/" method="POST">
         <table>
             <tr>
-                <td class="labels">USERNAME:</td> <td><input type="text" name="user"></td>
+                <td class="lead" rowspan="5"></td>
+                <td class="labels grayback">USERNAME:</td><td><input type="text" name="user" value="{{user_value}}" autofocus></label></td>
                 <td class="error">{{user_error}}</td>
             </tr>
             <tr>
-                <td class="labels">PASSWORD:</td> <td><input type="password" name="pass1"></td>
+                
+                <td class="labels grayback">PASSWORD:</td> <td><input type="password" name="pass1"></td>
                 <td class="error">{{pass1_error}}</td>
             </tr>
             <tr>
-                <td class="labels">RETYPE PASSWORD:</td> <td><input type="password" name="pass2"></td>
+                
+                <td class="labels grayback">RETYPE PASSWORD:</td> <td><input type="password" name="pass2"></td>
                 <td class="error">{{pass2_error}}</td>
             </tr>
             <tr>
-                <td class="labels">EMAIL:</td> <td><input type="text" name="email"></td>
+
+                <td class="labels grayback">EMAIL:</td> <td><input type="text" name="email"></td>
                 <td class="error">{{email_error}}</td>
             </tr>
+            <tr>
+                <td colspan="2"><button class="reset grayback" type="reset ">RESET FIELDS</button></td>
+            </tr>
         </table>
-        <button type="submit">PORTAL SIGNUP</button>
+
+        <button class="submit grayback" type="submit">PORTAL SIGNUP</button>
     </form>    
 
 {% endblock %}
