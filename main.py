@@ -49,6 +49,6 @@ def welcome():
     if error_check == 0: #if no errors, render welcome template
         return render_template('welcome.html', title="Welcome!", user=user_name)
     else: #if any errors, render signup with error messages
-        return render_template('signup.html', title="User Signup", user_error=no_user, pass1_error=no_pass,pass2_error=match_pass, email_error=bad_email)
+        return render_template('signup.html', title="User Signup", user_value=user_name, email_value=user_email,user_error=no_user, pass1_error=no_pass,pass2_error=match_pass, email_error=bad_email)
 
 app.run()
